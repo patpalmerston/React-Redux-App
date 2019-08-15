@@ -1,0 +1,54 @@
+{
+	"students": [
+		{
+			"id": 1,
+			"name": "Pat Palmerston",
+			"assignment": [
+				{
+					"id": 10,
+					"title": "first Careers assignment",
+					"completed": false
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "Larry Smoder",
+			"assignment": [
+				{
+					"id": 10,
+					"title": "first Careers assignment",
+					"completed": false
+				}
+			]
+		},
+		{
+			"id": 3,
+			"name": "Yustag Magur",
+			"assignment": [
+				{
+					"id": 10,
+					"title": "first Careers assignment",
+					"completed": false
+				}
+			]
+		}
+	],
+	"teamLeads": [
+		{
+			"id": 1,
+			"firstName": "Joe",
+			"lastName": "Neviel"
+		},
+		{
+			"id": 2,
+			"firstName": "Reda",
+			"lastName": "Tangrin"
+		},
+		{
+			"id": 3,
+			"firstName": "Skyler",
+			"lastName": "Derry"
+		}
+	]
+}
