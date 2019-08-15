@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddTeamLeadModal = () => {
+const AddStudentModal = () => {
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 
@@ -17,9 +17,9 @@ const AddTeamLeadModal = () => {
 	};
 
 	return (
-		<div id='add-teamLead-modal' className='modal'>
+		<div id='add-student-modal' className='modal'>
 			<div className='modal-content'>
-				<h4>New Team Lead</h4>
+				<h4>New Student</h4>
 				<div className='row'>
 					<div className='input-field'>
 						<input
@@ -61,4 +61,4 @@ const AddTeamLeadModal = () => {
 	);
 };
 
-export default AddTeamLeadModal;
+export default AddStudentModal;

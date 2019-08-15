@@ -5,24 +5,24 @@
 			"message": "did not complete career assignment week 1",
 			"attention": true,
 			"date": "03-02-2019",
-			"team_lead": "Joe Neviel"
+			"students": "Joe Neviel"
 		},
 		{
 			"id": 2,
 			"message": "completed career assignment week 1",
 			"attention": false,
 			"date": "03-02-2019",
-			"team_lead": "Reda Tangrin"
+			"students": "Reda Tangrin"
 		},
 		{
 			"id": 3,
 			"message": "completed career assignment week 1",
 			"attention": false,
 			"date": "03-02-2019",
-			"team_lead": "Skyler Derry"
+			"students": "Skyler Derry"
 		}
 	],
-	"teamLeads": [
+	"students": [
 		{
 			"id": 1,
 			"firstName": "Joe",

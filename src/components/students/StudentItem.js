@@ -1,10 +1,10 @@
 import React from 'react';
 
-const TeamLeadItem = ({ teamLead }) => {
+const StudentItem = ({ student }) => {
 	return (
 		<li className='collection-item'>
 			<div>
-				{teamLead.firstName} {teamLead.lastName}
+				{student.firstName} {student.lastName}
 				<a href='#!' className='secondary-content'>
 					<i className='material-icons grey-text'>delete</i>
 				</a>
@@ -13,4 +13,4 @@ const TeamLeadItem = ({ teamLead }) => {
 	);
 };
 
-export default TeamLeadItem;
+export default StudentItem;

@@ -28,7 +28,7 @@ const Logs = () => {
 		<div>
 			<ul className='collection with-header'>
 				<li className='collection-header'>
-					<h4 className='center'>Team Notes</h4>
+					<h4 className='center'>Team Lead Notes</h4>
 				</li>
 				{!loading && logs.length === 0 ? (
 					<p className='center'>No Notes yet ...</p>

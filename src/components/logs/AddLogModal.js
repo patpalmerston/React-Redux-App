@@ -4,16 +4,16 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 const AddLogModal = () => {
 	const [message, setMessage] = useState('');
 	const [attention, setAttention] = useState(false);
-	const [teamLead, setTeamLead] = useState('');
+	const [student, setStudent] = useState('');
 
 	const onSubmit = () => {
-		if (message === '' || teamLead === '') {
+		if (message === '' || student === '') {
 			M.toast({ html: 'Please enter Notes and Team Lead' });
 		} else {
-			console.log(message, attention, teamLead);
+			console.log(message, attention, student);
 			// Clear Fields
 			setMessage('');
-			setTeamLead('');
+			setStudent('');
 			setAttention(false);
 		}
 	};
@@ -21,7 +21,7 @@ const AddLogModal = () => {
 	return (
 		<div id='add-log-modal' className='modal' style={modalStyle}>
 			<div className='modal-content'>
-				<h4>Enter Team Notes</h4>
+				<h4>Enter Notes</h4>
 				<div className='row'>
 					<div className='input-field'>
 						<input
@@ -39,13 +39,13 @@ const AddLogModal = () => {
 				<div className='row'>
 					<div className='input-field'>
 						<select
-							name='teamLead'
-							value={teamLead}
+							name='student'
+							value={student}
 							className='browser-default'
-							onChange={e => setTeamLead(e.target.value)}
+							onChange={e => setStudent(e.target.value)}
 						>
 							<option value='' disabled>
-								Select Team Lead
+								Select Student
 							</option>
 							<option value='Joe Neviel'>Joe Neviel</option>
 							<option value='Reda Tangrin'>Reda Tangrin</option>

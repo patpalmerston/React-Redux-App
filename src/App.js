@@ -4,8 +4,8 @@ import Logs from './components/logs/Logs';
 import AddBtn from './components/layout/AddBtn';
 import AddLogModal from './components/logs/AddLogModal';
 import EditLogModal from './components/logs/EditLogModal';
-import AddTeamLeadModal from './components/teamLeads/AddTeamLeadModal';
-import TeamLeadListModal from './components/teamLeads/TeamLeadListModal';
+import AddStudentModal from './components/students/AddStudentModal';
+import StudentListModal from './components/students/StudentListModal';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
@@ -23,8 +23,8 @@ function App() {
 				<AddBtn />
 				<AddLogModal />
 				<EditLogModal />
-				<AddTeamLeadModal />
-				<TeamLeadListModal />
+				<AddStudentModal />
+				<StudentListModal />
 
 				<Logs />
 			</div>
