@@ -1,42 +1,42 @@
 {
-	"students": [
-		{
-			"id": 1,
-			"notes": "did not complete career assignment week 1",
-			"attention": true,
-			"date": "03-02-2019",
-			"team_lead": "Joe Neviel"
-		},
-		{
-			"id": 2,
-			"notes": "completed career assignment week 1",
-			"attention": false,
-			"date": "03-02-2019",
-			"team_lead": "Reda Tangrin"
-		},
-		{
-			"id": 3,
-			"notes": "completed career assignment week 1",
-			"attention": false,
-			"date": "03-02-2019",
-			"team_lead": "Skyler Derry"
-		}
-	],
-	"teamLeads": [
-		{
-			"id": 1,
-			"firstName": "Joe",
-			"lastName": "Neviel"
-		},
-		{
-			"id": 2,
-			"firstName": "Reda",
-			"lastName": "Tangrin"
-		},
-		{
-			"id": 3,
-			"firstName": "Skyler",
-			"lastName": "Derry"
-		}
-	]
+  "students": [
+    {
+      "id": 1,
+      "notes": "did not complete career assignment week 1",
+      "attention": true,
+      "date": "03-02-2019",
+      "team_lead": "Joe Neviel"
+    },
+    {
+      "id": 2,
+      "notes": "completed career assignment week 1",
+      "attention": false,
+      "date": "03-02-2019",
+      "team_lead": "Reda Tangrin"
+    },
+    {
+      "id": 3,
+      "notes": "completed career assignment week 1",
+      "attention": false,
+      "date": "03-02-2019",
+      "team_lead": "Skyler Derry"
+    }
+  ],
+  "teamLeads": [
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Neviel"
+    },
+    {
+      "id": 2,
+      "firstName": "Reda",
+      "lastName": "Tangrin"
+    },
+    {
+      "id": 3,
+      "firstName": "Skyler",
+      "lastName": "Derry"
+    }
+  ]
 }
