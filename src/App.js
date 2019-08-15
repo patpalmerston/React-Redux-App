@@ -7,6 +7,9 @@ import EditLogModal from './components/logs/EditLogModal';
 import AddStudentModal from './components/students/AddStudentModal';
 import StudentListModal from './components/students/StudentListModal';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
@@ -17,18 +20,20 @@ function App() {
 		M.AutoInit();
 	});
 	return (
-		<Fragment>
-			<SearchBar />
-			<div className='container'>
-				<AddBtn />
-				<AddLogModal />
-				<EditLogModal />
-				<AddStudentModal />
-				<StudentListModal />
+		<Provider store={store}>
+			<Fragment>
+				<SearchBar />
+				<div className='container'>
+					<AddBtn />
+					<AddLogModal />
+					<EditLogModal />
+					<AddStudentModal />
+					<StudentListModal />
 
-				<Logs />
-			</div>
-		</Fragment>
+					<Logs />
+				</div>
+			</Fragment>
+		</Provider>
 	);
 }
 

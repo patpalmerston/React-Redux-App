@@ -15,7 +15,7 @@ const LogItem = ({ log }) => {
 				</a>
 				<br />
 				<span className='grey-tex'>
-					<span className='black-text'>ID#{log.id}</span> {''}
+					<span className='black-text'>Student</span> {''}
 					<span className='black-text'>{log.student}</span> on{' '}
 					<Moment format='MMMM Do YYYY, h:mm:ss a'>{log.date}</Moment>
 				</span>
