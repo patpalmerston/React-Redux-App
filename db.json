@@ -2,36 +2,24 @@
 	"students": [
 		{
 			"id": 1,
-			"name": "Pat Palmerston",
-			"assignment": [
-				{
-					"id": 10,
-					"title": "first Careers assignment",
-					"completed": false
-				}
-			]
+			"notes": "did not complete career assignment week 1",
+			"attention": true,
+			"date": "03-02-2019",
+			"team_lead": "Joe Neviel"
 		},
 		{
 			"id": 2,
-			"name": "Larry Smoder",
-			"assignment": [
-				{
-					"id": 10,
-					"title": "first Careers assignment",
-					"completed": false
-				}
-			]
+			"notes": "completed career assignment week 1",
+			"attention": false,
+			"date": "03-02-2019",
+			"team_lead": "Reda Tangrin"
 		},
 		{
 			"id": 3,
-			"name": "Yustag Magur",
-			"assignment": [
-				{
-					"id": 10,
-					"title": "first Careers assignment",
-					"completed": false
-				}
-			]
+			"notes": "completed career assignment week 1",
+			"attention": false,
+			"date": "03-02-2019",
+			"team_lead": "Skyler Derry"
 		}
 	],
 	"teamLeads": [
