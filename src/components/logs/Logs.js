@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import LogItem from './LogItem';
+import PreLoader from '../layout/PreLoader';
 
 const Logs = () => {
 	const [logs, setLogs] = useState([]);
@@ -19,7 +21,7 @@ const Logs = () => {
 	};
 
 	if (loading) {
-		return <h4>Loading...</h4>;
+		return <PreLoader />;
 	}
 
 	return (
@@ -31,7 +33,7 @@ const Logs = () => {
 				{!loading && logs.length === 0 ? (
 					<p className='center'>No Notes yet ...</p>
 				) : (
-					logs.map(log => <li>{log.message}</li>)
+					logs.map(log => <LogItem log={log} key={log.id} />)
 				)}
 			</ul>
 		</div>
