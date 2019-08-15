@@ -1,14 +1,15 @@
-import { GET_lOGS, SET_LOADING, LOGS_ERROR } from './types';
+import { SET_LOADING, LOGS_ERROR, GET_LOGS } from './types';
 
 import axios from 'axios';
 
+// get logs from server
 export const getLogs = () => async dispatch => {
 	try {
 		setLoading();
 		const res = await axios.get('/logs');
 
 		dispatch({
-			type: GET_lOGS,
+			type: GET_LOGS,
 			payload: res.data
 		});
 	} catch (err) {
