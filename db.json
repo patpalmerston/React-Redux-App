@@ -1,42 +1,47 @@
 {
-	"logs": [
-		{
-			"id": 1,
-			"message": "did not complete career assignment week 1",
-			"attention": true,
-			"date": "03-02-2019",
-			"student": "Joe Neviel"
-		},
-		{
-			"id": 2,
-			"message": "completed career assignment week 1",
-			"attention": false,
-			"date": "03-02-2019",
-			"student": "Reda Tangrin"
-		},
-		{
-			"id": 3,
-			"message": "completed career assignment week 1",
-			"attention": false,
-			"date": "03-02-2019",
-			"student": "Skyler Derry"
-		}
-	],
-	"students": [
-		{
-			"id": 1,
-			"firstName": "Joe",
-			"lastName": "Neviel"
-		},
-		{
-			"id": 2,
-			"firstName": "Reda",
-			"lastName": "Tangrin"
-		},
-		{
-			"id": 3,
-			"firstName": "Skyler",
-			"lastName": "Derry"
-		}
-	]
+  "logs": [
+    {
+      "message": "Needs to work on first week Careers assignment",
+      "attention": true,
+      "student": "Joe Neviel",
+      "date": "2019-08-16T01:55:47.285Z",
+      "id": 1
+    },
+    {
+      "message": "Finished 3rd week career assignment",
+      "attention": false,
+      "student": "Skyler Derry",
+      "date": "2019-08-16T01:56:10.160Z",
+      "id": 2
+    },
+    {
+      "message": "Needs to do cover letter assignment",
+      "attention": true,
+      "student": "Reda Tangrin",
+      "date": "2019-08-16T01:56:32.180Z",
+      "id": 3
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Neviel"
+    },
+    {
+      "id": 2,
+      "firstName": "Reda",
+      "lastName": "Tangrin"
+    },
+    {
+      "id": 3,
+      "firstName": "Skyler",
+      "lastName": "Derry"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Palmerston",
+      "id": 4
+    }
+  ]
 }
