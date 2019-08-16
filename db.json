@@ -1,9 +1,6 @@
 {
   "logs": [
     {
-      "id": 1
-    },
-    {
       "message": "lets make more notes",
       "attention": true,
       "student": "Joe Neviel",
@@ -16,6 +13,20 @@
       "student": "Joe Neviel",
       "date": "2019-08-16T02:56:35.247Z",
       "id": 3
+    },
+    {
+      "message": "needs work on basic JS",
+      "attention": true,
+      "student": "Skyler Derry",
+      "date": "2019-08-16T03:18:25.158Z",
+      "id": 4
+    },
+    {
+      "message": "needs help with css frameworks",
+      "attention": true,
+      "student": "Joe Neviel",
+      "date": "2019-08-16T03:18:39.150Z",
+      "id": 5
     }
   ],
   "students": [

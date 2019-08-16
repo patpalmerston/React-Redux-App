@@ -84,21 +84,38 @@ export const updateLog = log => async dispatch => {
 	}
 };
 
+//Search Server logs
+export const searchLogs = text => async dispatch => {
+	try {
+		setLoading();
+		const res = await axios.get(`/logs?q=${text}`);
+
+		dispatch({
+			type: GET_LOGS,
+			payload: res.data
+		});
+	} catch (err) {
+		dispatch({
+			type: LOGS_ERROR,
+			payload: err.response.msg
+		});
+	}
+};
+
 // set Current in order to edit we need to populate a current state to edit
 export const setCurrent = log => {
-  return {
-    type: SET_CURRENT,
-    payload: log
-  }
-}
+	return {
+		type: SET_CURRENT,
+		payload: log
+	};
+};
 
 // set Current in order to edit we need to populate a current state to edit
 export const clearCurrent = () => {
-  return {
-    type: CLEAR_CURRENT
-  
-  }
-}
+	return {
+		type: CLEAR_CURRENT
+	};
+};
 
 export const setLoading = () => {
 	return {
