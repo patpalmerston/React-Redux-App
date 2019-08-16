@@ -1,4 +1,10 @@
-import { SET_LOADING, LOGS_ERROR, GET_LOGS, ADD_LOG } from './types';
+import {
+	SET_LOADING,
+	LOGS_ERROR,
+	GET_LOGS,
+	ADD_LOG,
+	DELETE_LOG
+} from './types';
 
 import axios from 'axios';
 
@@ -21,7 +27,7 @@ export const getLogs = () => async dispatch => {
 };
 
 // add logs to server
-export const addLog = (log) => async dispatch => {
+export const addLog = log => async dispatch => {
 	try {
 		setLoading();
 		const res = await axios.post('/logs', log);
@@ -38,11 +44,26 @@ export const addLog = (log) => async dispatch => {
 	}
 };
 
+// Delete log from server
+export const deleteLog = id => async dispatch => {
+	try {
+		setLoading();
+		await axios.delete(`/logs/${id}`);
+
+		dispatch({
+			type: DELETE_LOG,
+			payload: id
+		});
+	} catch (err) {
+		dispatch({
+			type: LOGS_ERROR,
+			payload: err.response.msg
+		});
+	}
+};
+
 export const setLoading = () => {
 	return {
 		type: SET_LOADING
 	};
 };
-
-
-
