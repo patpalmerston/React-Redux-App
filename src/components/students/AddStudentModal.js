@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { addStudent } from '../../actions/studentActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddStudentModal = () => {
+const AddStudentModal = ({ addStudent }) => {
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 
@@ -9,7 +11,12 @@ const AddStudentModal = () => {
 		if (firstName === '' || lastName === '') {
 			M.toast({ html: 'Please enter first and last name' });
 		} else {
-			console.log(firstName, lastName);
+			addStudent({
+				firstName,
+				lastName
+			});
+
+			M.toast({ html: `${firstName} ${lastName} was added as student` });
 			// Clear Fields
 			setFirstName('');
 			setLastName('');
@@ -61,4 +68,7 @@ const AddStudentModal = () => {
 	);
 };
 
-export default AddStudentModal;
+export default connect(
+	null,
+	{ addStudent }
+)(AddStudentModal);

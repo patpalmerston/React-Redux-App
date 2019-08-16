@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import StudentItem from './StudentItem';
 import { getStudents } from '../../actions/studentActions';
 
-const StudentListModal = ({student: {students, loading}, getStudents}) => {
-
+const StudentListModal = ({ student: { students, loading }, getStudents }) => {
 	useEffect(() => {
 		getStudents();
 		// eslint-disable-next-line

@@ -21,7 +21,43 @@ export const getStudents = () => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: STUDENTS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
+		});
+	}
+};
+
+// add student to server
+export const addStudent = student => async dispatch => {
+	try {
+		setLoading();
+		const res = await axios.post('/students', student);
+
+		dispatch({
+			type: ADD_STUDENT,
+			payload: res.data
+		});
+	} catch (err) {
+		dispatch({
+			type: STUDENTS_ERROR,
+			payload: err.response.statusText
+		});
+	}
+};
+
+// delete students
+export const deleteStudent = id => async dispatch => {
+	try {
+		setLoading();
+		await axios.get(`/students/${id}`);
+
+		dispatch({
+			type: DELETE_STUDENT,
+			payload: id
+		});
+	} catch (err) {
+		dispatch({
+			type: STUDENTS_ERROR,
+			payload: err.response.statusText
 		});
 	}
 };
