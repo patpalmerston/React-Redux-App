@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import StudentItem from './StudentItem';
+import { getStudents } from '../../actions/studentActions';
 
-const StudentListModal = () => {
-	const [students, setStudents] = useState([]);
-	const [loading, setLoading] = useState(false);
+const StudentListModal = ({student: {students, loading}, getStudents}) => {
 
 	useEffect(() => {
 		getStudents();
 		// eslint-disable-next-line
 	}, []);
-
-	const getStudents = async () => {
-		setLoading(true);
-		const res = await fetch('/students');
-		const data = await res.json();
-
-		setStudents(data);
-		setLoading(false);
-	};
 
 	return (
 		<div id='student-list-modal' className='modal'>
@@ -25,6 +16,7 @@ const StudentListModal = () => {
 				<h4>Student List</h4>
 				<ul className='collection'>
 					{!loading &&
+						students !== null &&
 						students.map(student => (
 							<StudentItem student={student} key={student.id} />
 						))}
@@ -34,4 +26,11 @@ const StudentListModal = () => {
 	);
 };
 
-export default StudentListModal;
+const mapStateToProps = state => ({
+	student: state.student
+});
+
+export default connect(
+	mapStateToProps,
+	{ getStudents }
+)(StudentListModal);

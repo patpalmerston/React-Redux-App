@@ -25,7 +25,7 @@ export const getLogs = () => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
 		});
 	}
 };
@@ -43,7 +43,7 @@ export const addLog = log => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
 		});
 	}
 };
@@ -61,7 +61,7 @@ export const deleteLog = id => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
 		});
 	}
 };
@@ -79,7 +79,7 @@ export const updateLog = log => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
 		});
 	}
 };
@@ -91,13 +91,13 @@ export const searchLogs = text => async dispatch => {
 		const res = await axios.get(`/logs?q=${text}`);
 
 		dispatch({
-			type: GET_LOGS,
+			type: SEARCH_LOGS,
 			payload: res.data
 		});
 	} catch (err) {
 		dispatch({
 			type: LOGS_ERROR,
-			payload: err.response.msg
+			payload: err.response.statusText
 		});
 	}
 };
