@@ -10,7 +10,7 @@ const StudentSelectOptions = ({
 		getStudents();
 		// eslint-disable-next-line
 	}, []);
-
+console.log('students', students)
 	return (
 		!loading &&
 		students !== null &&

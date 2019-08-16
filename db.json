@@ -3,9 +3,9 @@
     {
       "id": 2,
       "message": "updating data and keeping it persistent ",
-      "attention": false,
-      "student": "Patrick Palmerston",
-      "date": "2019-08-16T06:14:22.424Z"
+      "attention": true,
+      "student": "Kelley Brennick",
+      "date": "2019-08-16T22:05:47.582Z"
     },
     {
       "message": "not sure why data has not been persisting on the back end",
@@ -20,6 +20,13 @@
       "student": "Kelley Palmerston",
       "date": "2019-08-16T06:03:28.624Z",
       "id": 4
+    },
+    {
+      "id": 5,
+      "message": "Need to focus on Materialize",
+      "attention": false,
+      "student": "Joe Neviel",
+      "date": "2019-08-16T22:07:22.111Z"
     }
   ],
   "students": [
@@ -47,6 +54,16 @@
       "firstName": "Kelley",
       "lastName": "Palmerston",
       "id": 5
+    },
+    {
+      "firstName": "Joy",
+      "lastName": "Tanzam",
+      "id": 6
+    },
+    {
+      "firstName": "Kelley",
+      "lastName": "Brennick",
+      "id": 7
     }
   ]
 }

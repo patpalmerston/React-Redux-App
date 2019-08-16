@@ -21,7 +21,7 @@ export const getStudents = () => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: STUDENTS_ERROR,
-			payload: err.response.statusText
+			payload: err.response.msg
 		});
 	}
 };
@@ -34,12 +34,12 @@ export const addStudent = student => async dispatch => {
 
 		dispatch({
 			type: ADD_STUDENT,
-			payload: res.student
+			payload: res.data
 		});
 	} catch (err) {
 		dispatch({
 			type: STUDENTS_ERROR,
-			payload: err.response.statusText
+			payload: err.response.msg
 		});
 	}
 };
@@ -57,7 +57,7 @@ export const deleteStudent = id => async dispatch => {
 	} catch (err) {
 		dispatch({
 			type: STUDENTS_ERROR,
-			payload: err.response.statusText
+			payload: err.response.msg
 		});
 	}
 };
