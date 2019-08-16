@@ -1,9 +1,13 @@
 import {
+	GET_LOGS,
 	SET_LOADING,
 	LOGS_ERROR,
-	GET_LOGS,
 	ADD_LOG,
-	DELETE_LOG
+	DELETE_LOG,
+	UPDATE_LOG,
+	SEARCH_LOGS,
+	SET_CURRENT,
+	CLEAR_CURRENT
 } from './types';
 
 import axios from 'axios';
@@ -61,6 +65,40 @@ export const deleteLog = id => async dispatch => {
 		});
 	}
 };
+
+// update log from server
+export const updateLog = log => async dispatch => {
+	try {
+		setLoading();
+		await axios.put(`/logs/${log.id}`);
+
+		dispatch({
+			type: UPDATE_LOG,
+			payload: log
+		});
+	} catch (err) {
+		dispatch({
+			type: LOGS_ERROR,
+			payload: err.response.msg
+		});
+	}
+};
+
+// set Current in order to edit we need to populate a current state to edit
+export const setCurrent = log => {
+  return {
+    type: SET_CURRENT,
+    payload: log
+  }
+}
+
+// set Current in order to edit we need to populate a current state to edit
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT
+  
+  }
+}
 
 export const setLoading = () => {
 	return {

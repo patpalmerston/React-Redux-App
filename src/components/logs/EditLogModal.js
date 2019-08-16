@@ -1,16 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import M from 'materialize-css/dist/js/materialize.min.js';
+import { updateLog } from '../../actions/logActions';
 
-const EditLogModal = () => {
+const EditLogModal = ({ current, updateLog }) => {
 	const [message, setMessage] = useState('');
 	const [attention, setAttention] = useState(false);
 	const [student, setStudent] = useState('');
 
+	useEffect(() => {
+		if (current) {
+			setMessage(current.message);
+			setAttention(current.attention);
+			setStudent(current.student);
+		}
+	}, [current]);
+
 	const onSubmit = () => {
 		if (message === '' || student === '') {
-			M.toast({ html: 'Please enter Notes and Team Lead' });
+			M.toast({ html: 'Please enter Notes and Student' });
 		} else {
-			console.log(message, attention, student);
+			const updLog = {
+				id: current.id,
+				message,
+				attention,
+				student,
+				date: new Date()
+			};
+
+			updateLog(updLog);
+			M.toast({ html: 'Log Updated' });
+
 			// Clear Fields
 			setMessage('');
 			setStudent('');
@@ -30,9 +50,6 @@ const EditLogModal = () => {
 							value={message}
 							onChange={e => setMessage(e.target.value)}
 						/>
-						<label htmlFor='message' className='active'>
-							Note Message
-						</label>
 					</div>
 				</div>
 
@@ -89,4 +106,11 @@ const modalStyle = {
 	height: '75%'
 };
 
-export default EditLogModal;
+const mapStateToProps = state => ({
+	current: state.log.current
+});
+
+export default connect(
+	mapStateToProps,
+	{ updateLog }
+)(EditLogModal);
