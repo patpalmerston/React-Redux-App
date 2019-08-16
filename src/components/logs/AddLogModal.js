@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StudentSelectOptions from '../students/StudentSelectOptions'
 import { connect } from 'react-redux';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { addLog } from '../../actions/logActions';
@@ -59,9 +60,7 @@ const AddLogModal = ({ addLog }) => {
 							<option value='' disabled>
 								Select Student
 							</option>
-							<option value='Joe Neviel'>Joe Neviel</option>
-							<option value='Reda Tangrin'>Reda Tangrin</option>
-							<option value='Skyler Derry'>Skyler Derry</option>
+							<StudentSelectOptions />
 						</select>
 					</div>
 				</div>
