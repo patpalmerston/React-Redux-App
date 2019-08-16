@@ -34,7 +34,7 @@ export const addStudent = student => async dispatch => {
 
 		dispatch({
 			type: ADD_STUDENT,
-			payload: res.data
+			payload: res.student
 		});
 	} catch (err) {
 		dispatch({
@@ -48,7 +48,7 @@ export const addStudent = student => async dispatch => {
 export const deleteStudent = id => async dispatch => {
 	try {
 		setLoading();
-		await axios.get(`/students/${id}`);
+		await axios.delete(`/students/${id}`);
 
 		dispatch({
 			type: DELETE_STUDENT,

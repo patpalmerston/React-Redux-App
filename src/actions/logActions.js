@@ -70,11 +70,11 @@ export const deleteLog = id => async dispatch => {
 export const updateLog = log => async dispatch => {
 	try {
 		setLoading();
-		await axios.put(`/logs/${log.id}`);
+		const res = await axios.put(`/logs/${log.id}`, log);
 
 		dispatch({
 			type: UPDATE_LOG,
-			payload: log
+			payload: res.data
 		});
 	} catch (err) {
 		dispatch({

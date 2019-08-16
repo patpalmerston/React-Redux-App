@@ -1,7 +1,25 @@
 {
   "logs": [
     {
-      "id": 1
+      "id": 2,
+      "message": "updating data and keeping it persistent ",
+      "attention": false,
+      "student": "Patrick Palmerston",
+      "date": "2019-08-16T06:14:22.424Z"
+    },
+    {
+      "message": "not sure why data has not been persisting on the back end",
+      "attention": true,
+      "student": "Joe Neviel",
+      "date": "2019-08-16T06:03:00.161Z",
+      "id": 3
+    },
+    {
+      "message": "it weird that at point in time the data will delete without action",
+      "attention": false,
+      "student": "Kelley Palmerston",
+      "date": "2019-08-16T06:03:28.624Z",
+      "id": 4
     }
   ],
   "students": [
@@ -29,11 +47,6 @@
       "firstName": "Kelley",
       "lastName": "Palmerston",
       "id": 5
-    },
-    {
-      "firstName": "amigo",
-      "lastName": "norego",
-      "id": 6
     }
   ]
 }
